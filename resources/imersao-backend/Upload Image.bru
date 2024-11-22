@@ -1,0 +1,24 @@
+meta {
+  name: Upload Image
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/upload
+  body: multipartForm
+  auth: none
+}
+
+body:json {
+  {
+      "descricao": "Gato Post",
+      "img_url": "https://placecats.com/millie/300/150",
+      "alt": "Gato fazendo um post"
+  }
+  
+}
+
+body:multipart-form {
+  imagem: @file()
+}

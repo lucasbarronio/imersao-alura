@@ -1,0 +1,20 @@
+meta {
+  name: Post Post
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/posts
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "descricao": "Gato Post",
+      "img_url": "https://placecats.com/millie/300/150",
+      "alt": "Gato fazendo um post"
+  }
+  
+}
